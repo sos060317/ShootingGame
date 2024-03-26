@@ -9,11 +9,13 @@ public class Player : MonoBehaviour
 
     Rigidbody2D rigid;
     SpriteRenderer spriter;
+    Animator anim;
 
     private void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
         spriter = GetComponent<SpriteRenderer>();
+        anim = GetComponent<Animator>();
     }
 
     private void Update()
@@ -32,6 +34,8 @@ public class Player : MonoBehaviour
 
     private void LateUpdate()
     {
+        anim.SetFloat("Speed", inputVec.magnitude);
+
         // 플레이어 플립
         if(inputVec.x != 0)
         {

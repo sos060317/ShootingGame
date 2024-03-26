@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ad0e4cdc5d147478c9b32a2ae8d10f60
+guid: ad4c41422a6003743ae586d952343601
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -38,7 +38,7 @@ TextureImporter:
     mipBias: 0
     wrapU: 1
     wrapV: 1
-    wrapW: 0
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -63,7 +63,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
-  cookieLightType: 1
+  cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -131,8 +131,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5cc94606ade40cb46829c10f7dc34faa
-      internalID: 465106834
+      spriteID: 216bb188d147f174a9a8b77ffa0b5413
+      internalID: -2044327310
       vertices: []
       indices: 
       edges: []
@@ -152,8 +152,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7559666ea358b084787f49e7949c8126
-      internalID: 1367653019
+      spriteID: be228fddd25a0e949b085b249d18e4ee
+      internalID: -1177089826
       vertices: []
       indices: 
       edges: []
@@ -173,8 +173,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 66e1014edf4fdb8479546e7bf1f863cb
-      internalID: 664071487
+      spriteID: 171f9577fa6bd784886ca8df20f2cd2c
+      internalID: -928200840
       vertices: []
       indices: 
       edges: []
@@ -194,8 +194,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bbf301a56774be744b572330920d7afd
-      internalID: 1541472612
+      spriteID: 77151abd0d0ba344cbe665631d3ab193
+      internalID: 1523785494
       vertices: []
       indices: 
       edges: []
@@ -215,8 +215,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 83c607dbc3321364ab13f888c2aaaaa5
-      internalID: 1338081402
+      spriteID: 9b66844451128e243918875b66cf029c
+      internalID: 1289237665
       vertices: []
       indices: 
       edges: []
@@ -236,8 +236,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c0247e094bad0d64eb0fb38c5c9ab417
-      internalID: -1055023109
+      spriteID: f52adc068a12602459effa5cc01f78af
+      internalID: 433327022
       vertices: []
       indices: 
       edges: []
@@ -257,8 +257,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1716e7c13eab5ff4d9cf1bb2a1dda8b6
-      internalID: 175151237
+      spriteID: e1bccfa0f6bf8d64cb21b8a7f2910884
+      internalID: 35672954
       vertices: []
       indices: 
       edges: []
@@ -278,8 +278,176 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 99f4e0f245b76ed4ca81ece55e96fd23
-      internalID: -980935848
+      spriteID: ac546dd6898603d49b6db740bf2e7090
+      internalID: -54900268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unit000_6_5_Skill_Normal_0_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 512
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf35085b327aed44994425397dc2d7d5
+      internalID: 1753969957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unit000_6_5_Skill_Normal_0_9
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 512
+        width: 512
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af24e9dab85b2784694027121f63c978
+      internalID: -258868698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unit000_6_5_Skill_Normal_0_10
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 512
+        width: 512
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8698da9cd158f14e9fb530d5b49b39f
+      internalID: 1339488022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unit000_6_5_Skill_Normal_0_11
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 512
+        width: 512
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c86f680f13a8d0046b6f491556d05465
+      internalID: 1134371222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unit000_6_5_Skill_Normal_0_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 512
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc3272ecf7d7d3f42888852463f7f6c2
+      internalID: -25437376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unit000_6_5_Skill_Normal_0_13
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 512
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2819f55e55269e249948f53565fb0c06
+      internalID: 1980028036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unit000_6_5_Skill_Normal_0_14
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 512
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ddcd6fbbbd28ed4fb6edbbf62dd5351
+      internalID: 1745800182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unit000_6_5_Skill_Normal_0_15
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 512
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5416fb1cd9413a47a586913d5e22871
+      internalID: -1106625901
       vertices: []
       indices: 
       edges: []
@@ -287,7 +455,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 9ae927ab15cf28d4ca05d2a07cc0df53
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -295,14 +463,22 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Unit000_6_5_Skill_Normal_0_0: 465106834
-      Unit000_6_5_Skill_Normal_0_1: 1367653019
-      Unit000_6_5_Skill_Normal_0_2: 664071487
-      Unit000_6_5_Skill_Normal_0_3: 1541472612
-      Unit000_6_5_Skill_Normal_0_4: 1338081402
-      Unit000_6_5_Skill_Normal_0_5: -1055023109
-      Unit000_6_5_Skill_Normal_0_6: 175151237
-      Unit000_6_5_Skill_Normal_0_7: -980935848
+      Unit000_6_5_Skill_Normal_0_0: -2044327310
+      Unit000_6_5_Skill_Normal_0_1: -1177089826
+      Unit000_6_5_Skill_Normal_0_10: 1339488022
+      Unit000_6_5_Skill_Normal_0_11: 1134371222
+      Unit000_6_5_Skill_Normal_0_12: -25437376
+      Unit000_6_5_Skill_Normal_0_13: 1980028036
+      Unit000_6_5_Skill_Normal_0_14: 1745800182
+      Unit000_6_5_Skill_Normal_0_15: -1106625901
+      Unit000_6_5_Skill_Normal_0_2: -928200840
+      Unit000_6_5_Skill_Normal_0_3: 1523785494
+      Unit000_6_5_Skill_Normal_0_4: 1289237665
+      Unit000_6_5_Skill_Normal_0_5: 433327022
+      Unit000_6_5_Skill_Normal_0_6: 35672954
+      Unit000_6_5_Skill_Normal_0_7: -54900268
+      Unit000_6_5_Skill_Normal_0_8: 1753969957
+      Unit000_6_5_Skill_Normal_0_9: -258868698
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

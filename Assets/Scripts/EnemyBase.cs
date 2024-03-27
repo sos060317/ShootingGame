@@ -71,11 +71,18 @@ public class EnemyBase : MonoBehaviour
 
         if (health > 0)
         {
+            // 히트 모션   
 
         }
         else
         {
-
+            // 죽는 모션
+            Dead();
         }
+    }
+
+    private void Dead()
+    {
+        gameObject.SetActive(false);
     }
 }

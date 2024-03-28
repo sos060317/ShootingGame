@@ -29,6 +29,7 @@ public class Reposition : MonoBehaviour
         switch(transform.tag)
         {
             // 플레이어 이동 방향으로 위치 재설정
+            // (수정필요)몬스터한테 밀려서 영역 밖으로 나가지면 이상한 곳으로 맵이동함
             case "Ground":
                 if(diffX > diffY)
                 {

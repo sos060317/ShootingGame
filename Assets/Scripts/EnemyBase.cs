@@ -13,6 +13,7 @@ public class EnemyBase : MonoBehaviour
     bool isLive = true;
 
     Rigidbody2D rigid;
+    Collider2D coll;
     Animator anim;
     SpriteRenderer spriter;
     WaitForFixedUpdate wait;
@@ -20,6 +21,7 @@ public class EnemyBase : MonoBehaviour
     private void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
+        coll = GetComponent<Collider2D>();
         anim = GetComponent<Animator>();
         spriter = GetComponent<SpriteRenderer>();
         wait = new WaitForFixedUpdate();
@@ -51,6 +53,10 @@ public class EnemyBase : MonoBehaviour
         // 초기화
         target = GameManager.instance.player.GetComponent<Rigidbody2D>();
         isLive = true;
+        coll.enabled = true;
+        rigid.simulated = true;
+        spriter.sortingOrder = 2;
+        anim.SetBool("Dead", false);
         health = maxHealth;
     }
 
@@ -66,7 +72,7 @@ public class EnemyBase : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         // 총알과 충돌
-        if (!collision.CompareTag("Bullet"))
+        if (!collision.CompareTag("Bullet") || !isLive)
             return;
 
         health -= collision.GetComponent<Bullet>().damage;
@@ -80,7 +86,13 @@ public class EnemyBase : MonoBehaviour
         else
         {
             // 죽는 모션
-            Dead();
+            isLive = false;
+            coll.enabled = false;
+            rigid.simulated = false;
+            spriter.sortingOrder = 1;
+            anim.SetBool("Dead", true);
+            GameManager.instance.kill++;
+            GameManager.instance.GetExp();
         }
     }
 

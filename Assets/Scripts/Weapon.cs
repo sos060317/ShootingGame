@@ -55,7 +55,7 @@ public class Weapon : MonoBehaviour
                 Batch();
                 break;
             default:
-                speed = 0.3f;
+                speed = 0.5f;
                 break;
         }
     }

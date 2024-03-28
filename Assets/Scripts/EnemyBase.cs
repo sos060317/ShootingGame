@@ -15,17 +15,19 @@ public class EnemyBase : MonoBehaviour
     Rigidbody2D rigid;
     Animator anim;
     SpriteRenderer spriter;
+    WaitForFixedUpdate wait;
 
     private void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         spriter = GetComponent<SpriteRenderer>();
+        wait = new WaitForFixedUpdate();
     }
 
     private void FixedUpdate()
     {
-        if (!isLive)
+        if (!isLive || anim.GetCurrentAnimatorStateInfo(0).IsName("Debuff"))
             return;
 
         // 이동
@@ -68,17 +70,27 @@ public class EnemyBase : MonoBehaviour
             return;
 
         health -= collision.GetComponent<Bullet>().damage;
+        StartCoroutine(KnockBack());
 
         if (health > 0)
         {
             // 히트 모션   
-
+            anim.SetTrigger("Hit");
         }
         else
         {
             // 죽는 모션
             Dead();
         }
+    }
+
+    // 뒤로 밀려남
+    private IEnumerator KnockBack()
+    {
+        yield return wait;
+        Vector3 playerPos = GameManager.instance.player.transform.position;
+        Vector3 dirVec = transform.position - playerPos;
+        rigid.AddForce(dirVec.normalized * 3, ForceMode2D.Impulse);
     }
 
     private void Dead()

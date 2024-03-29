@@ -28,13 +28,19 @@ public class Item : MonoBehaviour
         textLevel.text = "Lv." + (level + 1);
     }
 
+    // 레벨 업
     public void OnClick()
     {
         switch(data.itemType)
         {
             case ItemData.ItemType.Melee:
             case ItemData.ItemType.Range:
-
+                if (level == 0)
+                {
+                    GameObject newWeapon = new GameObject();
+                    weapon = newWeapon.GetComponent<Weapon>();
+                    weapon.Init(data);
+                }
                 break;
             case ItemData.ItemType.Glove:
                 break;
@@ -46,6 +52,7 @@ public class Item : MonoBehaviour
 
         level++;
 
+        // 레벨 업 제한
         if (level == data.damages.Length)
             GetComponent<Button>().interactable = false;
     }

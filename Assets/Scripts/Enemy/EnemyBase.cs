@@ -54,6 +54,7 @@ public class EnemyBase : MonoBehaviour
     {
         // 초기화
         target = GameManager.instance.player.GetComponent<Rigidbody2D>();
+        health.onDie += DieAtion;
         isLive = true;
         coll.enabled = true;
         rigid.simulated = true;
@@ -74,12 +75,12 @@ public class EnemyBase : MonoBehaviour
         if (!collision.CompareTag("Bullet") || !isLive)
             return;
 
-        health.HP -= collision.GetComponent<Bullet>().damage;
+        health.TakeDamage(collision.GetComponent<Bullet>().damage);
         StartCoroutine(KnockBack());
 
         if (health.HP > 0)
         {
-            // 히트 모션   
+            // 히트 모션
             anim.SetTrigger("Hit");
         }
         else
@@ -89,7 +90,6 @@ public class EnemyBase : MonoBehaviour
             coll.enabled = false;
             rigid.simulated = false;
             spriter.sortingOrder = 1;
-            anim.SetBool("Dead", true);
             GameManager.instance.kill++;
             GameManager.instance.GetExp();
         }
@@ -107,6 +107,11 @@ public class EnemyBase : MonoBehaviour
     private void DieAtion()
     {
         health.onDie -= DieAtion;
+        anim.SetBool("Dead", true);
+    }
+
+    private void Dead()
+    {
         gameObject.SetActive(false);
     }
 }

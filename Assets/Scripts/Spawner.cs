@@ -6,6 +6,7 @@ public class Spawner : MonoBehaviour
 {
     public Transform[] spawnPoint;
     public SpawnData[] spawnData;
+    public float levelTime;
 
     int level;
     float timer;
@@ -15,11 +16,16 @@ public class Spawner : MonoBehaviour
         spawnPoint = GetComponentsInChildren<Transform>(); // 자식의 모든 Transform
     }
 
+    private void Start()
+    {
+        levelTime = GameManager.instance.maxGameTime / spawnData.Length;
+    }
+
     private void Update()
     {
         // 스폰 및 스폰 딜레이
         timer += Time.deltaTime;
-        level = Mathf.Min(Mathf.FloorToInt(GameManager.instance.gameTime / 10f), spawnData.Length - 1);
+        level = Mathf.Min(Mathf.FloorToInt(GameManager.instance.gameTime / levelTime), spawnData.Length - 1);
 
         // 레벨에 따라 스폰 시간 설정
         if (timer > spawnData[level].spawnTime)

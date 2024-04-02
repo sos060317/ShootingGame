@@ -19,19 +19,20 @@ public class Reposition : MonoBehaviour
 
         Vector3 playerPos = GameManager.instance.player.transform.position;
         Vector3 myPos = transform.position;
-        float diffX = Mathf.Abs(playerPos.x - myPos.x);
-        float diffY = Mathf.Abs(playerPos.y - myPos.y);
-
-        Vector3 playerDir = GameManager.instance.player.inputVec;
-        float dirX = playerDir.x < 0 ? -1 : 1;
-        float dirY = playerDir.y < 0 ? -1 : 1;
 
         switch(transform.tag)
         {
             // 플레이어 이동 방향으로 위치 재설정
             // (수정필요)몬스터한테 밀려서 영역 밖으로 나가지면 이상한 곳으로 맵이동함
             case "Ground":
-                if(diffX > diffY)
+                float diffX = playerPos.x - myPos.x;
+                float diffY = playerPos.y - myPos.y;
+                float dirX = diffX < 0 ? -1 : 1;
+                float dirY = diffY < 0 ? -1 : 1;
+                diffX = Mathf.Abs(diffX);
+                diffY = Mathf.Abs(diffY);
+
+                if (diffX > diffY)
                 {
                     transform.Translate(Vector3.right * dirX * 40);
                 }
@@ -43,7 +44,9 @@ public class Reposition : MonoBehaviour
             case "Enemy":
                 if(coll.enabled)
                 {
-                    transform.Translate(playerDir * 20 + new Vector3(Random.Range(-3f, 3f), Random.Range(-3f, 3f), 0));
+                    Vector3 dist = playerPos - myPos;
+                    Vector3 ran = new Vector3(Random.Range(-3, 3), Random.Range(-3, 3), 0);
+                    transform.Translate(ran + dist * 2);
                 }
                 break;
         }

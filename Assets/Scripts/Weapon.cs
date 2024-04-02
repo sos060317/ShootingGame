@@ -69,9 +69,11 @@ public class Weapon : MonoBehaviour
                 Batch();
                 break;
             default:
-                speed = 0.5f;
+                speed = 0.4f;
                 break;
         }
+
+        player.BroadcastMessage("ApplyGear", SendMessageOptions.DontRequireReceiver);
     }
 
     // 근접 무기 설정
@@ -109,6 +111,8 @@ public class Weapon : MonoBehaviour
 
         if(id == 0)
             Batch();
+
+        player.BroadcastMessage("ApplyGear", SendMessageOptions.DontRequireReceiver);
     }
 
     private void Fire()

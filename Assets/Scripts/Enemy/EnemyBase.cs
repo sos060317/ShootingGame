@@ -1,16 +1,16 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Health))]
 public class EnemyBase : MonoBehaviour
 {
     public float speed;
-    public float health;
-    public float maxHealth;
     public RuntimeAnimatorController[] animCon;
     public Rigidbody2D target;
 
     bool isLive = true;
+
+    protected Health health;
 
     Rigidbody2D rigid;
     Collider2D coll;
@@ -20,6 +20,8 @@ public class EnemyBase : MonoBehaviour
 
     private void Awake()
     {
+        health = GetComponent<Health>();
+
         rigid = GetComponent<Rigidbody2D>();
         coll = GetComponent<Collider2D>();
         anim = GetComponent<Animator>();
@@ -57,7 +59,6 @@ public class EnemyBase : MonoBehaviour
         rigid.simulated = true;
         spriter.sortingOrder = 2;
         anim.SetBool("Dead", false);
-        health = maxHealth;
     }
 
     // 초기화
@@ -65,8 +66,6 @@ public class EnemyBase : MonoBehaviour
     {
         anim.runtimeAnimatorController = animCon[data.spriteType];
         speed = data.speed;
-        maxHealth = data.health;
-        health = data.health;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -75,10 +74,10 @@ public class EnemyBase : MonoBehaviour
         if (!collision.CompareTag("Bullet") || !isLive)
             return;
 
-        health -= collision.GetComponent<Bullet>().damage;
+        health.HP -= collision.GetComponent<Bullet>().damage;
         StartCoroutine(KnockBack());
 
-        if (health > 0)
+        if (health.HP > 0)
         {
             // 히트 모션   
             anim.SetTrigger("Hit");
@@ -105,8 +104,9 @@ public class EnemyBase : MonoBehaviour
         rigid.AddForce(dirVec.normalized * 3, ForceMode2D.Impulse);
     }
 
-    private void Dead()
+    private void DieAtion()
     {
+        health.onDie -= DieAtion;
         gameObject.SetActive(false);
     }
 }

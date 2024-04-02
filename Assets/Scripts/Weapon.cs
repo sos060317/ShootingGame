@@ -45,6 +45,11 @@ public class Weapon : MonoBehaviour
     {
         // 기본 초기화
         name = "Weapon " + data.itemId;
+        transform.parent = player.transform;
+        transform.localPosition = Vector3.zero;
+
+        // 속성 초기화
+        id = data.itemId;
         damage = data.baseDamage;
         count = data.baseCount;
 
@@ -97,7 +102,7 @@ public class Weapon : MonoBehaviour
     }
 
     // 레벨 업(무기 데미지, 개수 추가)
-    private void LevelUp(float damage, int count)
+    public void LevelUp(float damage, int count)
     {
         this.damage = damage;
         this.count += count;

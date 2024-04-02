@@ -38,8 +38,18 @@ public class Item : MonoBehaviour
                 if (level == 0)
                 {
                     GameObject newWeapon = new GameObject();
-                    weapon = newWeapon.GetComponent<Weapon>();
+                    weapon = newWeapon.AddComponent<Weapon>();
                     weapon.Init(data);
+                }
+                else
+                {
+                    float nextDamage = data.baseDamage;
+                    int nextCount = 0;
+
+                    nextDamage += data.baseDamage * data.damages[level];
+                    nextCount += data.counts[level];
+
+                    weapon.LevelUp(nextDamage, nextCount);
                 }
                 break;
             case ItemData.ItemType.Glove:

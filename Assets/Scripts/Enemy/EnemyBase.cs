@@ -106,8 +106,8 @@ public class EnemyBase : MonoBehaviour
 
     private void DieAtion()
     {
-        health.onDie -= DieAtion;
         anim.SetBool("Dead", true);
+        health.onDie -= DieAtion;
     }
 
     private void Dead()

@@ -12,11 +12,12 @@ public class LevelUp : MonoBehaviour
     private void Awake()
     {
         rect = GetComponent<RectTransform>();
-        items =GetComponentsInChildren<Item>(true);
+        items = GetComponentsInChildren<Item>(true);
     }
 
     public void Show()
     {
+        Next();
         rect.localScale = Vector3.one;
         GameManager.instance.Stop();
     }
@@ -32,7 +33,7 @@ public class LevelUp : MonoBehaviour
         items[index].OnClick();
     }
 
-    void Next()
+    private void Next()
     {
         foreach(Item item in items)
         {
@@ -44,12 +45,16 @@ public class LevelUp : MonoBehaviour
 
         // 중복을 제거하고 요소를 무작위로 선택
         Random random = new Random();
-        var uniqueRandomNumbers = ran.OrderBy(x => random.Next()).Take(3);
+        var randomItems = items.OrderBy(x => random.Next()).Take(3);
 
-        Debug.Log("Unique Random Numbers:");
-        foreach (var number in uniqueRandomNumbers)
+        foreach (var item in randomItems)
         {
-            Debug.Log(number);
+            // 최대 레벨일 경우 소비 아이템으로 교체
+            if (item.level == item.data.damages.Length)
+                items[4].gameObject.SetActive(true);
+            else
+                item.gameObject.SetActive(true);
+
         }
     }
 }

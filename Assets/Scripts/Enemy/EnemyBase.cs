@@ -31,6 +31,9 @@ public class EnemyBase : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (!GameManager.instance.isLive)
+            return;
+
         if (!isLive || anim.GetCurrentAnimatorStateInfo(0).IsName("Debuff"))
             return;
 
@@ -43,6 +46,9 @@ public class EnemyBase : MonoBehaviour
 
     private void LateUpdate()
     {
+        if (!GameManager.instance.isLive)
+            return;
+
         if (!isLive)
             return;
 

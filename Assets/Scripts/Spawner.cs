@@ -23,6 +23,9 @@ public class Spawner : MonoBehaviour
 
     private void Update()
     {
+        if (!GameManager.instance.isLive)
+            return;
+
         // 스폰 및 스폰 딜레이
         timer += Time.deltaTime;
         level = Mathf.Min(Mathf.FloorToInt(GameManager.instance.gameTime / levelTime), spawnData.Length - 1);

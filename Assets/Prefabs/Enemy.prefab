@@ -161,7 +161,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentHealth: 0
-  maxHealth: 100
+  maxHealth: 10
 --- !u!114 &5533265568393099047
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,8 +175,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
-  health: 0
-  maxHealth: 0
   animCon:
   - {fileID: 9100000, guid: 867cba66ea0cb8f48b9d901afbdcb2d0, type: 2}
   - {fileID: 22100000, guid: f67d91c83e836614dbb472cd6b94ad00, type: 2}

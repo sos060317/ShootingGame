@@ -12,21 +12,41 @@ public class Item : MonoBehaviour
 
     Image icon;
     Text textLevel;
+    Text textName;
+    Text textDesc;
 
     private void Awake()
     {
         // 초기화
-        icon = GetComponentsInChildren<Image>()[2];
+        icon = transform.GetChild(0).GetChild(0).GetComponent<Image>();
         icon.sprite = data.itemIcon;
 
         Text[] texts = GetComponentsInChildren<Text>();
         textLevel = texts[0];
+        textName = texts[1];
+        textDesc = texts[2];
+        textName.text = data.itemName;
     }
 
-    private void LateUpdate()
+    private void OnEnable()
     {
         // 레벨 텍스트 초기화
         textLevel.text = "Lv." + (level + 1);
+
+        switch (data.itemType)
+        {
+            case ItemData.ItemType.Melee:
+            case ItemData.ItemType.Range:
+                textDesc.text = string.Format(data.itemDesc, data.damages[level] * 100, data.counts[level]);
+                break;
+            case ItemData.ItemType.Glove:
+            case ItemData.ItemType.Shoe:
+                textDesc.text = string.Format(data.itemDesc, data.damages[level] * 100);
+                break;
+            default:
+                textDesc.text = string.Format(data.itemDesc);
+                break;
+        }
     }
 
     // 레벨 업

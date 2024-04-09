@@ -61,6 +61,7 @@ public class EnemyBase : MonoBehaviour
         // √ ±‚»≠
         target = GameManager.instance.player.GetComponent<Rigidbody2D>();
         health.onDie += DieAtion;
+        GameManager.instance.enemyAllClear += DieAtion;
         isLive = true;
         coll.enabled = true;
         rigid.simulated = true;
@@ -114,6 +115,7 @@ public class EnemyBase : MonoBehaviour
     {
         anim.SetBool("Dead", true);
         health.onDie -= DieAtion;
+        GameManager.instance.enemyAllClear -= DieAtion;
     }
 
     private void Dead()

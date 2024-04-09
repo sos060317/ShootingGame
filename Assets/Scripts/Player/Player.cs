@@ -2,11 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Health))]
 public class Player : MonoBehaviour
 {
     public Vector2 inputVec;
     public float speed;
     public Scanner scanner;
+
+    [HideInInspector]
+    public Health health;
 
     Rigidbody2D rigid;
     SpriteRenderer spriter;
@@ -14,10 +18,17 @@ public class Player : MonoBehaviour
 
     private void Awake()
     {
+        health = GetComponent<Health>();
+
         rigid = GetComponent<Rigidbody2D>();
         spriter = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
         scanner = GetComponent<Scanner>();
+    }
+
+    private void Start()
+    {
+        health.onDie += DieAtion;
     }
 
     private void Update()
@@ -51,6 +62,29 @@ public class Player : MonoBehaviour
         if(inputVec.x != 0)
         {
             spriter.flipX = inputVec.x > 0;
+        }
+    }
+
+    private void DieAtion()
+    {
+        for(int index = 2; index < transform.childCount; index++)
+        {
+            transform.GetChild(index).gameObject.SetActive(false);
+        }
+
+        anim.SetTrigger("Dead");
+
+        health.onDie -= DieAtion;
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (!GameManager.instance.isLive)
+            return;
+
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            health.TakeDamage(Time.deltaTime * 10);
         }
     }
 }

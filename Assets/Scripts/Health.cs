@@ -6,8 +6,8 @@ using UnityEngine;
 /// </summary>
 public class Health : MonoBehaviour, IDamageable
 {
-    [SerializeField] protected float currentHealth;
-    [SerializeField] protected float maxHealth;
+    private float currentHealth;
+    public float maxHealth;
 
     public Action onDie;
 

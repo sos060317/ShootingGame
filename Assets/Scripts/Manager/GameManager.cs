@@ -14,8 +14,6 @@ public class GameManager : MonoBehaviour
     public float maxGameTime = 2 * 10f;
 
     [Header("Player Info")]
-    public int health;
-    public int maxHealth = 100;
     public int level;
     public int kill;
     public int exp;
@@ -33,7 +31,6 @@ public class GameManager : MonoBehaviour
 
     public void GameStart()
     {
-        health = maxHealth;
         uiLevelUp.Select(0); // 기본 무기
         isLive = true;
     }

@@ -38,9 +38,6 @@ public class Weapon : MonoBehaviour
                 }
                 break;
         }
-
-        if (Input.GetButtonDown("Jump"))
-            LevelUp(10, 1);
     }
     
     // 무기별 초기화

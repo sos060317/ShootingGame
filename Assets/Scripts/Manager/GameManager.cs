@@ -29,14 +29,13 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
-        isLive = true;
     }
 
-    private void Start()
+    public void GameStart()
     {
         health = maxHealth;
-
-        uiLevelUp.Select(0);
+        uiLevelUp.Select(0); // 기본 무기
+        isLive = true;
     }
 
     private void Update()

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -23,6 +24,9 @@ public class GameManager : MonoBehaviour
     public PoolManager pool;
     public Player player;
     public LevelUp uiLevelUp;
+    public GameObject uiResult;
+
+    WaitForSeconds wait = new WaitForSeconds(0.5f);
 
     private void Awake()
     {
@@ -33,6 +37,26 @@ public class GameManager : MonoBehaviour
     {
         uiLevelUp.Select(0); // 기본 무기
         isLive = true;
+    }
+
+    public void GameOver()
+    {
+        StartCoroutine(GameOverRoutine());
+    }
+
+    IEnumerator GameOverRoutine()
+    {
+        isLive = false;
+
+        yield return wait;
+
+        uiResult.SetActive(true);
+        Stop();
+    }
+
+    public void GameRestart()
+    {
+        SceneManager.LoadScene(0);
     }
 
     private void Update()

@@ -77,6 +77,7 @@ public class GameManager : MonoBehaviour
     public void GameRestart()
     {
         SceneManager.LoadScene(0);
+        Time.timeScale = 1;
     }
 
     private void Update()

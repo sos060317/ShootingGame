@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     public float maxGameTime = 2 * 10f;
 
     [Header("Player Info")]
+    public int playerId;
     public int level;
     public int kill;
     public int exp;
@@ -35,10 +36,15 @@ public class GameManager : MonoBehaviour
         instance = this;
     }
 
-    public void GameStart()
+    public void GameStart(int id)
     {
-        uiLevelUp.Select(0); // 기본 무기
+        playerId = id;
+
+        player.gameObject.SetActive(true);
+        uiLevelUp.Select(playerId % 2); // 기본 무기 지급
         Resume();
+
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.Select);
     }
 
     public void GameOver()
@@ -55,6 +61,8 @@ public class GameManager : MonoBehaviour
         uiResult.gameObject.SetActive(true);
         uiResult.Lose();
         Stop();
+
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.Lose);
     }
 
     public void GameVictroy()
@@ -72,6 +80,8 @@ public class GameManager : MonoBehaviour
         uiResult.gameObject.SetActive(true);
         uiResult.Win();
         Stop();
+
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.Win);
     }
 
     public void GameRestart()

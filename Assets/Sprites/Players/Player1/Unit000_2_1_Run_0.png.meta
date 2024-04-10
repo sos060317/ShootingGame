@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 24f88da5a56fcda4c96cf8f9bb18f4ba
+guid: 2383edb3856b01c49807d64eb2203171
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -131,8 +131,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9ac8871d87757a6448d3cbb92495bdf3
-      internalID: 845614315
+      spriteID: 9621030f7f49015478527e0628f20eca
+      internalID: 1376762907
       vertices: []
       indices: 
       edges: []
@@ -152,8 +152,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1a6ba5ff2fc38f64792b9429935c1acf
-      internalID: 1206467277
+      spriteID: 4fedf1bd3a4659a44959a8437e82d757
+      internalID: 243153060
       vertices: []
       indices: 
       edges: []
@@ -173,8 +173,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a743cbf161b4bdf4280698858f1d7b65
-      internalID: -787399770
+      spriteID: add8b8dcca501a143971e11f3e269a2c
+      internalID: 272061394
       vertices: []
       indices: 
       edges: []
@@ -194,8 +194,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 182ce3a5982c6b640be7c3ebe5041d93
-      internalID: 1083633770
+      spriteID: 0be2fa7418cb5444abf9578f87c67baf
+      internalID: -1489175773
       vertices: []
       indices: 
       edges: []
@@ -215,8 +215,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 94fc371367ffcee4c958f2c9ca4b7193
-      internalID: 220242195
+      spriteID: ce29981d9ac7765408a148f6929d7633
+      internalID: -2101683020
       vertices: []
       indices: 
       edges: []
@@ -236,8 +236,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6db5ecc20c9628440a09507b07ee76a9
-      internalID: -2018388578
+      spriteID: 100826cb5dc652649843045bfd3dcdd2
+      internalID: -1635056286
       vertices: []
       indices: 
       edges: []
@@ -257,8 +257,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4a36439176c27ed439fb9dfee4dc48bb
-      internalID: -1459968262
+      spriteID: deeec91f658ccb04e8dc11ac59c2327d
+      internalID: 54394796
       vertices: []
       indices: 
       edges: []
@@ -278,8 +278,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fc5976fea5a555e4a9f214efe94d205d
-      internalID: 1629780749
+      spriteID: 8965eb55ea5c53c42925e1e728b7268d
+      internalID: 541732510
       vertices: []
       indices: 
       edges: []
@@ -299,8 +299,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2a818e553476c8b48bd2aa81aa0c1fa3
-      internalID: 1657935443
+      spriteID: a29ba9def7b21444ab09c8b24844462d
+      internalID: 1129063587
       vertices: []
       indices: 
       edges: []
@@ -320,8 +320,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf753e9dd9c4f0640b8d9b61cdb076a3
-      internalID: -1005932523
+      spriteID: db7b0ed582acab54392edeb3b9b798fb
+      internalID: -669907443
       vertices: []
       indices: 
       edges: []
@@ -337,16 +337,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Unit000_2_1_Run_0_0: 845614315
-      Unit000_2_1_Run_0_1: 1206467277
-      Unit000_2_1_Run_0_2: -787399770
-      Unit000_2_1_Run_0_3: 1083633770
-      Unit000_2_1_Run_0_4: 220242195
-      Unit000_2_1_Run_0_5: -2018388578
-      Unit000_2_1_Run_0_6: -1459968262
-      Unit000_2_1_Run_0_7: 1629780749
-      Unit000_2_1_Run_0_8: 1657935443
-      Unit000_2_1_Run_0_9: -1005932523
+      Unit000_2_1_Run_0_0: 1376762907
+      Unit000_2_1_Run_0_1: 243153060
+      Unit000_2_1_Run_0_2: 272061394
+      Unit000_2_1_Run_0_3: -1489175773
+      Unit000_2_1_Run_0_4: -2101683020
+      Unit000_2_1_Run_0_5: -1635056286
+      Unit000_2_1_Run_0_6: 54394796
+      Unit000_2_1_Run_0_7: 541732510
+      Unit000_2_1_Run_0_8: 1129063587
+      Unit000_2_1_Run_0_9: -669907443
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

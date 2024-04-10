@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c95565c01414fb940bf798341d0945f6
+guid: c281f40b8c4af1549b29130f85975fb4
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -131,8 +131,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1bd04ca30d8572143a0256e43dbd56e3
-      internalID: 1447942705
+      spriteID: 93fea70cdd96d384683061d6bb86ee99
+      internalID: 874145021
       vertices: []
       indices: 
       edges: []
@@ -152,8 +152,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8bd8ffab8b7209f4aa33c0c403e04b07
-      internalID: -1477183886
+      spriteID: 043804298409541448a935825891cd1c
+      internalID: -1119455111
       vertices: []
       indices: 
       edges: []
@@ -173,8 +173,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5e4c555e3ba4d15479b8ecacd1f910ee
-      internalID: -609089724
+      spriteID: ed3aa823e4f877746909caf0bf69dec6
+      internalID: -794397923
       vertices: []
       indices: 
       edges: []
@@ -194,8 +194,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6d6eec49842c97945bde76c670b60ed0
-      internalID: -1821167704
+      spriteID: f0fd9d3f26f27df428209d3a86231103
+      internalID: 1369407243
       vertices: []
       indices: 
       edges: []
@@ -215,8 +215,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0d66f38aa0944e547998bfe7865cc167
-      internalID: 970111081
+      spriteID: eb95f6146eace494ab3f12ddba9fc4bb
+      internalID: -190401767
       vertices: []
       indices: 
       edges: []
@@ -236,8 +236,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2d4fd9d355f73924f9ad4b3cf5e54dc1
-      internalID: -1015588189
+      spriteID: 1ab9f01292a396848b97739f93d933c4
+      internalID: -370812763
       vertices: []
       indices: 
       edges: []
@@ -257,8 +257,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 885513b46fd166e48a6d99e1e3c9ad8d
-      internalID: 910294376
+      spriteID: 7b809a428eb7340438b2afc4800aa773
+      internalID: -1317670660
       vertices: []
       indices: 
       edges: []
@@ -278,8 +278,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d680c3df9ef31274ab6cae5bf06ead67
-      internalID: -1876870371
+      spriteID: e54775648d3244b489f208be4286f198
+      internalID: 894410146
       vertices: []
       indices: 
       edges: []
@@ -299,8 +299,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 149e4df414cdb014d8189b1b9e8e6cf7
-      internalID: -2099841228
+      spriteID: a97429823177b2047bc6b3d639974a0d
+      internalID: 236889377
       vertices: []
       indices: 
       edges: []
@@ -320,8 +320,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ea21958fe97350345976829cecc101d7
-      internalID: -1252124073
+      spriteID: 3cdf8f8e536b1ef43bd0d5d3f803e97d
+      internalID: -1949099318
       vertices: []
       indices: 
       edges: []
@@ -341,8 +341,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 02497e179d706d04fb626cfd0adada5f
-      internalID: -1727429902
+      spriteID: 9ba109e61c9a6f34fa10625c92875de0
+      internalID: -981225578
       vertices: []
       indices: 
       edges: []
@@ -362,8 +362,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 93d3f14a5c54e3f4d99e94b978c60ccb
-      internalID: -655918434
+      spriteID: 31138a79b9602b847a64891dd60f2792
+      internalID: 1017368690
       vertices: []
       indices: 
       edges: []
@@ -383,8 +383,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d707f432d9a8d7c4c90a9f009a663e9b
-      internalID: -1926846111
+      spriteID: 183d721d55d441d4a9267326813d2b8b
+      internalID: -79405726
       vertices: []
       indices: 
       edges: []
@@ -404,8 +404,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 16deb4c30a9ba344a8eb309027d6f561
-      internalID: 2118010869
+      spriteID: fe0a6b550a55e9745a41847ded786825
+      internalID: -1109256764
       vertices: []
       indices: 
       edges: []
@@ -425,8 +425,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c2358142560bb874fa15f57fb7998255
-      internalID: 918517465
+      spriteID: 4f4d2638337062847a8c25e080805be9
+      internalID: -1467763500
       vertices: []
       indices: 
       edges: []
@@ -446,8 +446,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a509c1d92e7999645b37f58dd3bf3556
-      internalID: -1306180868
+      spriteID: fb6762af3caa7b84f941ba3c3ecc53de
+      internalID: 1217138560
       vertices: []
       indices: 
       edges: []
@@ -463,22 +463,22 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Unit000_3_3_Debuff_Stun_0_0: 1447942705
-      Unit000_3_3_Debuff_Stun_0_1: -1477183886
-      Unit000_3_3_Debuff_Stun_0_10: -1727429902
-      Unit000_3_3_Debuff_Stun_0_11: -655918434
-      Unit000_3_3_Debuff_Stun_0_12: -1926846111
-      Unit000_3_3_Debuff_Stun_0_13: 2118010869
-      Unit000_3_3_Debuff_Stun_0_14: 918517465
-      Unit000_3_3_Debuff_Stun_0_15: -1306180868
-      Unit000_3_3_Debuff_Stun_0_2: -609089724
-      Unit000_3_3_Debuff_Stun_0_3: -1821167704
-      Unit000_3_3_Debuff_Stun_0_4: 970111081
-      Unit000_3_3_Debuff_Stun_0_5: -1015588189
-      Unit000_3_3_Debuff_Stun_0_6: 910294376
-      Unit000_3_3_Debuff_Stun_0_7: -1876870371
-      Unit000_3_3_Debuff_Stun_0_8: -2099841228
-      Unit000_3_3_Debuff_Stun_0_9: -1252124073
+      Unit000_3_3_Debuff_Stun_0_0: 874145021
+      Unit000_3_3_Debuff_Stun_0_1: -1119455111
+      Unit000_3_3_Debuff_Stun_0_10: -981225578
+      Unit000_3_3_Debuff_Stun_0_11: 1017368690
+      Unit000_3_3_Debuff_Stun_0_12: -79405726
+      Unit000_3_3_Debuff_Stun_0_13: -1109256764
+      Unit000_3_3_Debuff_Stun_0_14: -1467763500
+      Unit000_3_3_Debuff_Stun_0_15: 1217138560
+      Unit000_3_3_Debuff_Stun_0_2: -794397923
+      Unit000_3_3_Debuff_Stun_0_3: 1369407243
+      Unit000_3_3_Debuff_Stun_0_4: -190401767
+      Unit000_3_3_Debuff_Stun_0_5: -370812763
+      Unit000_3_3_Debuff_Stun_0_6: -1317670660
+      Unit000_3_3_Debuff_Stun_0_7: 894410146
+      Unit000_3_3_Debuff_Stun_0_8: 236889377
+      Unit000_3_3_Debuff_Stun_0_9: -1949099318
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

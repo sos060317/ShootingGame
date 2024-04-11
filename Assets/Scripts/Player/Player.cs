@@ -29,7 +29,7 @@ public class Player : MonoBehaviour
 
     private void OnEnable()
     {
-        anim.runtimeAnimatorController = animCon[GameManager.instance.playerId];
+        //anim.runtimeAnimatorController = animCon[GameManager.instance.playerId];
     }
 
     private void Start()

@@ -46,4 +46,32 @@ public class AchiveManager : MonoBehaviour
             unlockCharacter[index].SetActive(isUnlock);
         }
     }
+
+    private void LateUpdate()
+    {
+        foreach (Achive achive in achives)
+        {
+            CheckAchive(achive);
+        }
+    }
+
+    private void CheckAchive(Achive achive)
+    {
+        bool isAchive = false;
+
+        switch(achive)
+        {
+            case Achive.UnlockAssassin:
+                isAchive = GameManager.instance.kill >= 10;
+                break;
+            case Achive.UnlockDragonKiller:
+                isAchive = GameManager.instance.gameTime == GameManager.instance.maxGameTime;
+                break;
+        }
+
+        if(isAchive && PlayerPrefs.GetInt(achive.ToString()) == 0)
+        {
+            PlayerPrefs.SetInt(achive.ToString(), 1);
+        }
+    }
 }

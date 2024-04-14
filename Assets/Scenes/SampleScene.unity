@@ -45392,7 +45392,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isLive: 0
   gameTime: 0
-  maxGameTime: 30
+  maxGameTime: 20
   playerId: 0
   level: 0
   kill: 0

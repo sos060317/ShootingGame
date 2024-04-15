@@ -1,6 +1,4 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
+using System.Xml.Linq;
 using UnityEngine;
 
 public class AudioManager : MonoBehaviour
@@ -11,6 +9,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip bgmClip;
     public float bgmVolume;
     AudioSource bgmPlayer;
+    AudioHighPassFilter bgmEffect;
 
     [Header("SFX")]
     public AudioClip[] sfxClips;
@@ -37,8 +36,7 @@ public class AudioManager : MonoBehaviour
         bgmPlayer.loop = true;
         bgmPlayer.volume = bgmVolume;
         bgmPlayer.clip = bgmClip;
-
-        bgmPlayer.Play();
+        bgmEffect = Camera.main.GetComponent<AudioHighPassFilter>();
 
         // 효과음 플레이어 초기화
         GameObject sfxObject = new GameObject("sfxObject");
@@ -49,8 +47,26 @@ public class AudioManager : MonoBehaviour
         {
             sfxPlayers[index] = sfxObject.AddComponent<AudioSource>();
             sfxPlayers[index].playOnAwake = false;
+            sfxPlayers[index].bypassListenerEffects = true;
             sfxPlayers[index].volume = sfxVolume;
         }
+    }
+
+    public void PlayBgm(bool isPlay)
+    {
+        if (isPlay)
+        {
+            bgmPlayer.Play();
+        }
+        else
+        {
+            bgmPlayer.Stop();
+        }
+    }
+
+    public void EffectBgm(bool isPlay)
+    {
+        bgmEffect.enabled = isPlay;
     }
 
     public void PlaySfx(Sfx sfx)
@@ -62,8 +78,14 @@ public class AudioManager : MonoBehaviour
             if (sfxPlayers[loopIndex].isPlaying)
                 continue;
 
+            int ranIndex = 0;
+            if (sfx == Sfx.Hit || sfx == Sfx.Melee)
+            {
+                ranIndex = UnityEngine.Random.Range(0, 2);
+            }
+
             channelIndex = loopIndex;
-            sfxPlayers[loopIndex].clip = sfxClips[(int)sfx];
+            sfxPlayers[loopIndex].clip = sfxClips[(int)sfx + ranIndex];
             sfxPlayers[loopIndex].Play();
             break;
         }

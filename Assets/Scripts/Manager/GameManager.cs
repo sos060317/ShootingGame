@@ -44,6 +44,7 @@ public class GameManager : MonoBehaviour
         uiLevelUp.Select(playerId % 2); // 기본 무기 지급
         Resume();
 
+        AudioManager.instance.PlayBgm(true);
         AudioManager.instance.PlaySfx(AudioManager.Sfx.Select);
     }
 
@@ -62,6 +63,7 @@ public class GameManager : MonoBehaviour
         uiResult.Lose();
         Stop();
 
+        AudioManager.instance.PlayBgm(false);
         AudioManager.instance.PlaySfx(AudioManager.Sfx.Lose);
     }
 

@@ -89,6 +89,7 @@ public class EnemyBase : MonoBehaviour
         {
             // 히트 모션
             anim.SetTrigger("Hit");
+            AudioManager.instance.PlaySfx(AudioManager.Sfx.Hit);
         }
         else
         {
@@ -99,6 +100,9 @@ public class EnemyBase : MonoBehaviour
             spriter.sortingOrder = 1;
             GameManager.instance.kill++;
             GameManager.instance.GetExp();
+
+            //if(GameManager.instance.isLive)
+            //    AudioManager.instance.PlaySfx(AudioManager.Sfx.Dead);
         }
     }
 

@@ -101,8 +101,8 @@ public class EnemyBase : MonoBehaviour
             GameManager.instance.kill++;
             GameManager.instance.GetExp();
 
-            //if(GameManager.instance.isLive)
-            //    AudioManager.instance.PlaySfx(AudioManager.Sfx.Dead);
+            if(GameManager.instance.isLive)
+                AudioManager.instance.PlaySfx(AudioManager.Sfx.Dead);
         }
     }
 
